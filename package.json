@@ -1,0 +1,27 @@
+{
+  "name": "code-view",
+  "version": "1.0.0",
+  "description": "Code visualizer for web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilian6806/CodeView.git"
+  },
+  "keywords": [
+    "code",
+    "visualizer"
+  ],
+  "author": "ilian.iliev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilian6806/CodeView/issues"
+  },
+  "homepage": "https://github.com/ilian6806/CodeView#readme",
+  "dependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-uglify": "2.3.0"
+  }
+}

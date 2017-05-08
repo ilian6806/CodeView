@@ -1,0 +1,39 @@
+.code-view {
+    background: #272822;
+    color: #F8F8F2;
+    font-family: Consolas, Arial;
+    font-size: 16px;
+    padding: 3px 2px 50px 2px;
+    margin: 0;
+}
+
+.code-view.code-view-no-wrap {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.code-view br::selection,
+.code-view div::selection, 
+.code-view span::selection {
+    background: #383830;
+}
+
+.code-view br::-moz-selection { background: #383830; }
+.code-view div::-moz-selection { background: #383830; }
+.code-view span::-moz-selection { background: #383830; }
+
+.code-view div.line,
+.code-view div.comment {
+    position: relative;
+    padding: 2px 10px;
+    min-height: 20px;
+}
+
+.code-view div.comment {
+    color: #75715E;
+}
+
+.code-view span.code-view-color-1 { color: #E6DB74; }
+.code-view span.code-view-color-2 { color: #ADD8E6; }
+.code-view span.code-view-color-3 { color: #F92672; }
+.code-view span.code-view-color-4 { color: #8481C9; }
