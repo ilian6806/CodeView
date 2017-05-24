@@ -38,6 +38,4 @@ jspm_packages
 .node_repl_history
 
 node_modules
-/test_data
-testnode.js
-Gruntfile.js
+
