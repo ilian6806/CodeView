@@ -31,6 +31,7 @@ node_modules
 jspm_packages
 
 # Optional npm cache directory
+
 .npm
 
 # Optional REPL history
@@ -38,3 +39,4 @@ jspm_packages
 
 node_modules
 testnode.js
+/test_data
