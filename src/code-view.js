@@ -247,6 +247,10 @@
             this.el.classList.add(NO_WRAP_CLASS);
         }
 
+        if (this.opt.content) {
+            this.write(this.opt.content);
+        }
+
         if (this.opt.url) {
             this.writeFileContent(this.opt.url);
         }

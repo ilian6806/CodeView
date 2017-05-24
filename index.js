@@ -3,6 +3,7 @@ new CodeView({
     selector:"#test",
     // noWrap: false,
     //url: '/code-view-test-data.js'
+    content: 'var content = "initial content;"'
 })
 .writeFileContent('https://github.com/ilian6806/CodeView/blob/master/code-view-test-data.js')
 .write(['var a = true;','//33 var', "a = 'w'"]).write('a=123')
