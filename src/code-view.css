@@ -8,7 +8,7 @@
 }
 
 .code-view.code-view-no-wrap {
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
 }
 
