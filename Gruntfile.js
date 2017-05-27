@@ -24,8 +24,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        'copy': {
+            main: {
+                expand: true,
+                src: 'src/*',
+                dest: 'docs'
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.registerTask('default', ['uglify']);
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.registerTask('default', ['uglify', 'copy']);
 };
