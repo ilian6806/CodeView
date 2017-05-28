@@ -21,11 +21,15 @@ body {
 }
 
 .title {
-    font-size: 40px;
+    font-size: 45px;
     font-family: Consolas, monaco, monospace;
     font-weight: bold;
     font-variant: small-caps;
     letter-spacing: 3px;
+}
+
+#main-content {
+    padding-bottom: 20px;
 }
 
 .centered {

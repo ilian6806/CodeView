@@ -4,6 +4,9 @@ $(function () {
     var $menus = $('.list-group-item');
 
     $.support.cors = true;
+    $.ajaxPrefilter(function(options) {
+        options.async = true;
+    });
 
     var demos = [
         'basics',
@@ -26,7 +29,11 @@ $(function () {
         fileName = fileName.replace('#', '');
         fileName = partials.indexOf(fileName) > -1 ? fileName : '404';
 
-        $container.load('partials/' + fileName + '.phtml');
+        $container.fadeOut(0).load('partials/' + fileName + '.phtml', function () {
+            setTimeout(function () {
+                $container.fadeIn(100);
+            }, 1);
+        });
     }
 
     function onMenuClick() {

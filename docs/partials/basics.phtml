@@ -6,15 +6,15 @@
 <script id="source">
     new CodeView({
         selector: '#result',
-        content: 'var content = "initial content";',
+        content: 'var content = "optional initial content";',
     })
     .write('a = \'55\'')
     .write([
-        'var a = true;',
+        'var b = true;',
         '// some comment',
         'a = 100;'
     ])
-    .write('a = 123;');
+    .write('c = 123;');
 </script>
 
 <!-- Write #source content to #code div -->

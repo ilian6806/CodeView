@@ -1,0 +1,47 @@
+
+.code-view {
+
+    background: $background;
+    color: $normal;
+    font-family: Consolas, Arial;
+    font-size: 16px;
+    padding: 3px 2px 50px 2px;
+    margin: 0;
+
+    &.code-view-no-wrap {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    br::selection,
+    div::selection, 
+    span::selection {
+        background: $selection;
+    }
+    br::-moz-selection { background: $selection; }
+    div::-moz-selection { background: $selection; }
+    span::-moz-selection { background: $selection; }
+
+    div.line,
+    div.comment {
+        position: relative;
+        padding: 2px 10px;
+        min-height: 20px;
+    }
+
+    div.comment {
+        color: $comment;
+    }
+
+    span.code-view-color-1 { color: $color_1; }
+    span.code-view-color-2 { color: $color_2; }
+    span.code-view-color-3 { color: $color_3; }
+    span.code-view-color-4 { color: $color_4; }
+
+    // code in strings
+    span.code-view-color-1 {
+        span.code-view-color-2 { color: $color_1; }
+        span.code-view-color-3 { color: $color_1; }
+        span.code-view-color-4 { color: $color_1; }
+    }
+}
