@@ -4,7 +4,7 @@
         define(['jquery'], factory);
     } else if (typeof module !== 'undefined' && module.exports) {
         // CommonJS Module
-        factory(require("jquery"));
+        factory(require('jquery'));
     } else {
         // Browser globals.
         factory(jQuery);

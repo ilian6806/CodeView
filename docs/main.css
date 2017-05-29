@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+body {
+    font-size: 16px;
+}
+
 #code,
 #result {
     display: inline-block;
@@ -36,8 +40,49 @@ body {
     text-align: center;
 }
 
+.inline {
+    display: inline-block;
+}
+
+.auto-width {
+    width: auto;
+}
+
+.paddings-10 {
+    padding: 10px;
+}
+.paddings-20 {
+    padding: 20px;
+}
+
+.width-400 {
+    width: 400px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
 #demos a {
     padding: 8px 40px;
+}
+
+.jumbotron {
+    padding: 35px;
+}
+
+
+/* ----------------------------------------------------- */
+/* ---------------------- Setup ------------------------ */
+/* ----------------------------------------------------- */
+
+.setup-wrapper input,
+.setup-wrapper div {
+    display: inline-block;
+}
+.setup-wrapper div {
+    font-size: 16px;
+    padding: 20px 10px;
 }
 
 

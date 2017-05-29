@@ -18,9 +18,6 @@
         noWrap: true
     };
 
-    function pp(m) {
-        console.log(m);
-    }
 
     /**
      * Main code parsing logic

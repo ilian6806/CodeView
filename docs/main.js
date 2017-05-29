@@ -14,7 +14,8 @@ $(function () {
 
     var partials = [
         'basics',
-        'setup'
+        'setup',
+        'about'
     ];
 
     var initialPage = window.location.hash ? window.location.hash : '#setup';
