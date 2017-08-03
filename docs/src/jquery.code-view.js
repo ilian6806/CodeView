@@ -359,13 +359,19 @@ $.fn.codeView = function(content) {
         content: content
     });
 
-    $el.write = function () {
-        view.write.apply($el, arguments);
+    $el.write = function (m) {
+        view.write(m);
+        return $el;
+    };
+
+    $el.writeFileContent = function (url) {
+        view.writeFileContent(url);
         return $el;
     };
 
     return $el;
 };
+
 
 function getSelector(el) {
     if (el.id) {
