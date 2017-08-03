@@ -1,0 +1,16 @@
+<div id="code"></div>
+<div id="result"></div>
+
+<script id="source">
+    $('#result')
+        .codeView('// Initial content')
+        .write('var obj = new Object(null);')
+        .write([
+            'var name = \'Ilian\';',
+            '// some other comment',
+            'name = null;'
+        ]);
+</script>
+
+<!-- Write #source content to #code div -->
+<script src="write-source.js"></script>

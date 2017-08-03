@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         uglify: {
             src: {
                 files: {
-                    'src/code-view.min.js': ['src/code-view.js'],
-                    'src/jquery.code-view.min.js': ['src/jquery.code-view.js']
+                    'docs/src/code-view.min.js': ['docs/src/code-view.js'],
+                    'docs/src/jquery.code-view.min.js': ['docs/src/jquery.code-view.js']
                 },
                 options: {
                     maxLineLen: 0,
@@ -25,6 +25,11 @@ module.exports = function(grunt) {
                 }
             }
         },
+        run: {
+            buildPlugin: {
+                exec: 'node docs/jq_plugin/build.js',
+            }
+        },
         sass: {
             dist: {
                 options: {
@@ -33,9 +38,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'src/themes/partials/',
-                    src: ['**/*.scss'],
-                    dest: 'src/themes/',
+                    cwd: 'docs/src/themes/partials/',
+                    src: ['*.scss'],
+                    dest: 'docs/src/themes/',
                     ext: '.css'
                 }]
             }
@@ -43,22 +48,39 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 expand: true,
-                src: 'src/**/*',
-                dest: 'docs'
+                cwd: 'docs/src',
+                src: '**',
+                dest: 'src/'
             }
         },
         watch: {
-            scripts: {
-                files: 'src/**/*',
-                tasks: ['uglify', 'sass', 'copy'],
+            // scripts: {
+            //     files: ['docs/src/code-view.js', 'docs/src/jquery.code-view.js'],
+            //     tasks: ['uglify'],
+            // },
+            plugin: {
+                files: ['docs/jq_plugin/jquery.code-view.js'],
+                tasks: ['run:buildPlugin'],
+            },
+            sass: {
+                files: 'docs/src/**/*.scss',
+                tasks: ['sass'],
             },
         },
     });
 
+    grunt.loadNpmTasks('grunt-run');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'copy']);
+    grunt.registerTask('default', ['watch']);
+
+    grunt.registerTask('build', [
+        'run:buildPlugin',
+        'uglify',
+        'sass',
+        'copy'
+    ]);
 };

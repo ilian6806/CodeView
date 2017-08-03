@@ -10,10 +10,12 @@ $(function () {
 
     var demos = [
         'basics',
+        'jquery-plugin',
     ];
 
     var partials = [
         'basics',
+        'jquery-plugin',
         'setup',
         'about'
     ];
