@@ -1,0 +1,20 @@
+
+<div id="code"></div>
+<div id="result"></div>
+
+<script id="source">
+    new CodeView({
+        selector: '#result',
+        url: 'url/to/local/file'
+    });
+</script>
+<script>
+    // this obviously will fail so add content manualy
+    new CodeView({
+        selector: '#result',
+        content: 'var text = \'Hi, from your file. Original. huh ?\';',
+    });
+</script>
+
+<!-- Write #source content to #code div -->
+<script src="write-source.js"></script>

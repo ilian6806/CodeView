@@ -11,11 +11,13 @@ $(function () {
     var demos = [
         'basics',
         'jquery-plugin',
+        'load-file'
     ];
 
     var partials = [
         'basics',
         'jquery-plugin',
+        'load-file',
         'setup',
         'about'
     ];
