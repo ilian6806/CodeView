@@ -12,10 +12,19 @@ body {
 #result {
     display: inline-block;
     width: 45%;
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
     vertical-align: top;
     text-align: left;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    #code,
+    #result {
+        width: 90%;
+        margin: 30px auto;
+        display: block;
+    }
 }
 
 #code,

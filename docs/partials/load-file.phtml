@@ -3,18 +3,16 @@
 <div id="result"></div>
 
 <script id="source">
-    new CodeView({
-        selector: '#result',
-        url: 'url/to/local/file'
-    });
-</script>
-<script>
-    // this obviously will fail so add content manualy
-    new CodeView({
-        selector: '#result',
-        content: 'var text = \'Hi, from your file. Original. huh ?\';',
-    });
-</script>
 
-<!-- Write #source content to #code div -->
-<script src="write-source.js"></script>
+    // this obviously will fail so add content manualy
+
+    new CodeView('#code')
+        .write('new CodeView({')
+        .write('    selector: \'#result\',')
+        .write('    url: \'url/to/local/file\'')
+        .write('});');
+
+    new CodeView('#result')
+        .write('var text = \'Hi, from your file. Original. huh ?\';');
+
+</script>
