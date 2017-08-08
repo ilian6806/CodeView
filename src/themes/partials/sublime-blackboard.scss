@@ -1,0 +1,13 @@
+
+$background: #0C1021;
+$selection: #253B76;
+
+$normal: #F8F8F8;
+$comment: #96AEAE;
+
+$color_1: #3AB13C; // strings
+$color_2: #FBDE2D; // var|this|window|document|body|function
+$color_3: #D8DE2D; // new|return|throw|goto|if|else|elseif
+$color_4: #7DD73C; // undefined|null|true|false
+
+@import "../main.scss";

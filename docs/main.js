@@ -18,6 +18,7 @@ $(function () {
         'basics',
         'jquery-plugin',
         'load-file',
+        'themes',
         'setup',
         'about'
     ];
