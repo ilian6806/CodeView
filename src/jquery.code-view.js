@@ -76,7 +76,7 @@
 
             // all code elements
             for (var i = 0, len = regEx.codeElements.length; i < len; i++) {
-                str = str.replace(regEx.codeElements[i], '<span class="code-view-color-' + (i + 1) + '">/*code-view.js*/</span>');
+                str = str.replace(regEx.codeElements[i], '<span class="code-view-color-' + (i + 1) + '">$&</span>');
             }
 
             return indent(str);

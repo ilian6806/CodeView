@@ -24,7 +24,7 @@ fs.readFile(TEMPLATE, 'utf8', function (err, template) {
             return console.log(err);
         }
 
-        var result = template.replace('/*code-view.js*/', core);
+        var result = template.replace('$&', core);
 
         fs.writeFile(SOURCE, result, 'utf8', function (err) {
 

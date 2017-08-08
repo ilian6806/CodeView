@@ -15,7 +15,7 @@
 /*
  * Core module
  */
-/*code-view.js*/
+$&
 
 
 /*
