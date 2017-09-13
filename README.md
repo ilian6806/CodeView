@@ -1,5 +1,5 @@
 # CodeView
-Code visualizer for web with simple [themes](https://ilian6806.github.io/CodeView/#themes){:target="_blank"} system.
+Code visualizer for web with simple [themes](https://ilian6806.github.io/CodeView/#themes) system.
 
 
 ![](https://img.shields.io/gemnasium/mathiasbynens/he.svg) ![](https://img.shields.io/npm/l/express.svg)
@@ -55,5 +55,5 @@ new CodeView({
 });
 ```
 
-It can be use for something like [this](https://ilian6806.github.io/Handy/){:target="_blank"} for example.
-You can find some more docs [here](https://ilian6806.github.io/CodeView/){:target="_blank"}.
+It can be use for something like [this](https://ilian6806.github.io/Handy/) for example.
+You can find some more docs [here](https://ilian6806.github.io/CodeView/).
