@@ -2,7 +2,7 @@
 Code visualizer for web with simple [themes](https://ilian6806.github.io/CodeView/#themes) system.
 
 
-![](https://img.shields.io/gemnasium/mathiasbynens/he.svg) ![](https://img.shields.io/npm/l/express.svg)
+[![Code Climate](https://codeclimate.com/github/ilian6806/CodeView/badges/gpa.svg)](https://codeclimate.com/github/ilian6806/CodeView) [![Issue Count](https://codeclimate.com/github/ilian6806/CodeView/badges/issue_count.svg)](https://codeclimate.com/github/ilian6806/CodeView) ![](https://img.shields.io/gemnasium/mathiasbynens/he.svg) ![](https://img.shields.io/npm/l/express.svg)
 
 #### Setup:
 Just include this ```<script src="code-view.js"></script>```
