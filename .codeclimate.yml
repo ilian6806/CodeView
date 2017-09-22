@@ -11,6 +11,12 @@ engines:
         enabled: false
       complexity:
         enabled: false
+      wrap-iife:
+        enabled: false
+      no-new-func:
+        enabled: false
+      global-require:
+        enabled: false
   fixme:
     enabled: true
 ratings:

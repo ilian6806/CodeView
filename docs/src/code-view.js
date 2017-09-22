@@ -32,7 +32,7 @@
                 /([\"\'])(.*?(?:(\\"|\\').*?\3.*?)*?)\1/g,
                 /var|this|window|document|body|function/g,
                 /new|return|throw|goto|if|else|elseif===/g,
-                /undefined|null|true|false/g,
+                /undefined|null|true|false/g
             ]
         };
 
@@ -95,7 +95,7 @@
             return p instanceof Array;
         },
         object: function (p) {
-            return (typeof p).toLowerCase() === 'object' && p.constructor == Object;
+            return (typeof p).toLowerCase() === 'object' && p.constructor === Object;
         },
         func: function (p) {
             return !!(p && p.constructor && p.call && p.apply);
@@ -111,7 +111,7 @@
 
     // add negative checks
     for (var type in is) {
-        if (is.hasOwnProperty(type) && type != 'not') {
+        if (is.hasOwnProperty(type) && type !== 'not') {
             is.not[type] = new Function('p', 'return ! (' + is[type] + ')(p)');
         }
     }
@@ -124,14 +124,15 @@
 
         var opt = (options && is.object(options)) ? options : {};
         var def = (defaults && is.object(defaults)) ? defaults : {};
+        var prop;
 
-        for (var prop in opt) {
+        for (prop in opt) {
             if (opt.hasOwnProperty(prop)) {
                 this[prop] = opt[prop];
             }
         }
 
-        for (var prop in def) {
+        for (prop in def) {
             if (def.hasOwnProperty(prop) && !this.hasOwnProperty(prop)) {
                 this[prop] = def[prop];
             }
@@ -154,7 +155,9 @@
             } catch (e) {
                 try {
                   xhr = new ActiveXObject('Microsoft.XMLHTTP');
-                } catch (e) {}
+                } catch (err) {
+                    showError(err);
+                }
             }
         }
 

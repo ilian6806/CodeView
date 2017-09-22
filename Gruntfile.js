@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         },
         run: {
             buildPlugin: {
-                exec: 'node docs/jq_plugin/build.js',
+                exec: 'node docs/jq_plugin/build.js'
             }
         },
         sass: {
@@ -60,13 +60,13 @@ module.exports = function(grunt) {
             // },
             plugin: {
                 files: ['docs/jq_plugin/jquery.code-view.js'],
-                tasks: ['run:buildPlugin'],
+                tasks: ['run:buildPlugin']
             },
             sass: {
                 files: 'docs/src/**/*.scss',
-                tasks: ['sass'],
-            },
-        },
+                tasks: ['sass']
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-run');
